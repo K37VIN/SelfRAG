@@ -4,6 +4,8 @@ Self-RAG (Self-Reflective Retrieval-Augmented Generation) is an advanced RAG par
 
 Architecturally, Self-RAG is often implemented as a multi-step control flow (frequently using graph-based frameworks like LangGraph) that includes decision nodes for retrieval, document relevance filtering, answer verification, and optional query rewriting. After an initial generation attempt, the model may label an answer as useful or not useful, check if it is supported by retrieved passages, and either finalize the response, retrieve again with a refined query, or gracefully abstain when no reliable answer can be found. This feedback-driven loop closely mirrors human research behavior—searching, reading, revising, and validating before answering—and makes Self-RAG particularly powerful for production RAG systems where trustworthiness, explainability, and robustness matter more than raw fluency.
 
+
+
 ## Langgraph Workflow Implementation:
 
 ![alt text](image.png)
